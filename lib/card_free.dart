@@ -45,9 +45,9 @@ class _CardFreeState extends BaseCardState {
   _bookList() {
     return GridView.count(
       crossAxisCount: 3,
-      mainAxisSpacing: 10,
-      crossAxisSpacing: 15,
-      childAspectRatio: 0.46,
+      mainAxisSpacing: 10,    //垂直间距
+      crossAxisSpacing: 15,    //水平间距
+      childAspectRatio: 0.46,    //长宽比
       padding: EdgeInsets.only(left: 20, right: 20),
       children: BOOK_LIST.map((item) {
         return _item(item);
@@ -74,8 +74,6 @@ class _CardFreeState extends BaseCardState {
         ),
       ),
     );
-
-
   }
 
   Widget _item(Map<String, String> item) {
